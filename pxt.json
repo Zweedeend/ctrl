@@ -5,7 +5,8 @@
         "core": "*",
         "microphone": "*",
         "devices": "*",
-        "maqueen": "github:dfrobot/pxt-maqueen#v1.5.3"
+        "maqueen": "github:dfrobot/pxt-maqueen#v1.5.3",
+        "bluetooth": "*"
     },
     "files": [
         "main.blocks",

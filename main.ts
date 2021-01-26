@@ -1,15 +1,18 @@
-devices.onGamepadButton(MesDpadButtonInfo.BUp, function () {
-    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0)
-})
-devices.onGamepadButton(MesDpadButtonInfo.BDown, function () {
-    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
-})
-devices.onGamepadButton(MesDpadButtonInfo.AUp, function () {
-    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
-})
-devices.onGamepadButton(MesDpadButtonInfo.ADown, function () {
+input.onButtonPressed(Button.A, function () {
     maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
+    basic.showString("A")
 })
+input.onButtonPressed(Button.AB, function () {
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
+    basic.showString("C")
+})
+input.onButtonPressed(Button.B, function () {
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
+    basic.showString("B")
+})
+bluetooth.startButtonService()
+bluetooth.startLEDService()
 basic.forever(function () {
 	
 })
